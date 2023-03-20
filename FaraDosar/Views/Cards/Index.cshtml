@@ -1,43 +1,51 @@
-﻿@foreach (FaraDosar.Models.Card card in ViewBag.Cards)
-{
-    <div class="card">
+﻿
+<link rel="stylesheet" href="~/css/card.css" />
 
-        @Html.Partial("CardPartial", card )
-
-        <a class="btn btn-success" href="/Posts/Show/@card.Id">Afisare Card</a>
-
+<div class="card text-center">
+    <div class="card-header">
+        Featured
     </div>
-
-    <br />
-    <br />
-}
-
-<section class="container1">
-
-    <div class="cards1">
-        <div class="card-image CAR"></div>
-        <h2>Product Landing Page</h2>
-        <p>
-            A landing page of a product, build with vanilla css.
-        </p>
-        <a href="https://ddj400landingpage.netlify.app/" target="_blank" class="Demo">Demo</a>
-        <a href="https://github.com/DBojneagu/Product-Website" target="_blank" class="Code">Code</a>
+    <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
-
-    <div class="cards2">
-        <div class="card-image CAR2"></div>
-        <h2>Assembly Backtrack implementation</h2>
-        <p>
-            This was my second project from computer arhitecture at my university. I implemented a iteratable backtracking algorithm in assembly language.
-            The syntax used was AT&T, on a x86 arhitecture.
-        </p>
-        <a href="https://github.com/DBojneagu/Assembly-Backtracking" target="_blank" class="Code2">Code</a>
+    <div class="card-footer text-muted">
+        2 days ago
     </div>
+</div>
 
-    <div class="cards2">
-        <div class="card-image CAR3"></div>
-        <h2>Sorting Algorithms</h2>
-        <p>This is my first project of the second semester.In this course, called data structures, i had to implement an algorithm with 5 or more sorting algorithm and compare their run-time.</p>
-        <a href="https://github.com/DBojneagu/SD-Project1" target="_blank" class="Code">Code</a>
-
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Card title</h5>
+                    <div class="card-text text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                    <a href="#" class="btn btn-outline-primary rounded-pill">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Card title</h5>
+                    <div class="card-text text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                    <a href="#" class="btn btn-outline-primary rounded-pill">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Card title</h5>
+                    <div class="card-text text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                    <a href="#" class="btn btn-outline-primary rounded-pill">Go somewhere</a>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
