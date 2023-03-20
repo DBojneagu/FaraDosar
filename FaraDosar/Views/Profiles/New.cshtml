@@ -30,6 +30,12 @@
     @Html.TextArea("Adresa",null,new {@class = "form-control",@placeholder = "Adresa dumneavoastra din buletin"})
     @Html.ValidationMessage("Adresa",null,new { @class = "text-danger"})
     <br />
+    
+    <input type = "tel" id = "phone" name = "phone"
+      pattern = "[0-7]{2}[0-9]{8}"
+      required >
+      <br/>
+
 
     
 
