@@ -3,7 +3,6 @@ using FaraDosar.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace FaraDosar.Controllers
 {
@@ -30,14 +29,23 @@ namespace FaraDosar.Controllers
             _roleManager = roleManager;
         }
 
-        [Authorize(Roles = "User,Admin")]
         public IActionResult Index()
         {
-            var cards = db.Cards.Include("User");
+            var cards = db.Cards;
             ViewBag.Cards = cards;
 
 
             return View();
         }
+
+        public IActionResult Show(int id)
+        {
+            Card card = db.Cards.Where(crd => crd.Id == id).First();
+
+            ViewBag.Id = id;
+
+            return View(card);
+        }
+
     }
 }

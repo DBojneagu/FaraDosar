@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace FaraDosar.Models
 {
@@ -15,6 +13,6 @@ namespace FaraDosar.Models
         [MinLength(5, ErrorMessage = "Titlul trebuie sa aiba mai mult de 5 caractere")]
         public string Title { get; set; }
 
-        public virtual ApplicationUser? User { get; set; }
+        public string Content { get; set; }
     }
 }

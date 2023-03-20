@@ -26,35 +26,29 @@
 <br />
 <div class="container">
     <div class="row">
+        @foreach (FaraDosar.Models.Card card in ViewBag.Cards)
+{
         <div class="col-sm-4">
             <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0">
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body text-center">
-                    <h5 class="card-title mb-0">Card title</h5>
-                    <div class="card-text text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                    <a href="#" class="btn btn-outline-primary rounded-pill">Go somewhere</a>
+                    <h5 class="card-title mb-0">@card.Title</h5>
+                    <div class="card-text text-muted mb-3">@card.Content</div>
+                        <a href="/Cards/Show/@card.Id" class="btn btn-outline-primary rounded-pill">Citeste mai departe</a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title mb-0">Card title</h5>
-                    <div class="card-text text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                    <a href="#" class="btn btn-outline-primary rounded-pill">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title mb-0">Card title</h5>
-                    <div class="card-text text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                    <a href="#" class="btn btn-outline-primary rounded-pill">Go somewhere</a>
-                </div>
-            </div>
-        </div>
+}
+
     </div>
 </div>
+@*<div class="col-sm-4">
+    <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body text-center">
+            <h5 class="card-title mb-0">Card title</h5>
+            <div class="card-text text-muted mb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+            <a href="#" class="btn btn-outline-primary rounded-pill"href="href="/Articles/Show/@article.Id">Go somewhere</a>
+        </div>
+    </div>
+</div>*@

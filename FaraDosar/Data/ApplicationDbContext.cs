@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FaraDosar.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-    }
+        }
         public DbSet<Card> Cards { get; set; }
     }
 }
