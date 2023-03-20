@@ -14,18 +14,17 @@
 <div class="container">
     <div class="row">
         @foreach (FaraDosar.Models.Card card in ViewBag.Cards)
-{
-        <div class="col-sm-4">
-            <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title mb-0">@card.Title</h5>
-                    <div class="card-text text-muted mb-3">@card.Content</div>
-                        <a href="/Cards/Show/@card.Id" class="btn btn-outline-primary rounded-pill">Citeste mai departe</a>
+        {
+            <div class="col-sm-4">
+                <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-0">@card.Title</h5>
+                        <div class="card-text text-muted mb-3">@card.Content</div>
+                    <a href="/Cards/Show/@card.Id" class="btn btn-outline-primary rounded-pill stretched-link">Citeste mai departe</a>
+                    </div>
                 </div>
-            </div>
-        </div>
-}
-
+            </div>      
+        }
     </div>
 </div>
