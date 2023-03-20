@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\img\\filler.jpeg",
+      "PackagePath": "staticwebassets\\img\\filler.jpeg"
+    },
+    {
       "Id": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
