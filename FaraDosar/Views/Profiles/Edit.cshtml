@@ -1,0 +1,29 @@
+﻿@model FaraDosar.Models.Profile
+
+<h2 class="text-center"> Editare Profil </h2>
+<br />
+
+@using (Html.BeginForm(actionName: "Edit", controllerName: "Profiles", method: FormMethod.Post, routeValues: new { id = Model.Id }))
+{
+    @Html.Label("FirstName","First Name")
+    @Html.EditorFor(m => m.FirstName, new {htmlAtrributes = new{@class = "form-control"} })
+    @Html.ValidationMessageFor(m => m.FirstName,null,new {@class = "text-danger"})
+    <br />
+    <br />
+
+    @Html.Label("LastName","Last Name")
+    @Html.EditorFor(m => m.LastName, new {htmlAtrributes = new{@class = "form-control"} })
+    @Html.ValidationMessageFor(m => m.LastName,null,new {@class = "text-danger"})
+    <br />
+    <br />
+
+    @Html.Label("Adresa","Adresa")
+    @Html.Editor("Adresa", new {htmlAttributes = new {@class = "form-control"} })
+    @Html.ValidationMessage("Adresa",null,new { @class = "text-danger"})
+    <br />
+    <br />
+
+
+    <br />
+    <button class="btn " style="background-color : #FFFB7D" type="submit">Modifica</button>
+}
