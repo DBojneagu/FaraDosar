@@ -40,7 +40,9 @@ namespace FaraDosar.Controllers
 
         public IActionResult Show(int id)
         {
-            Card card = db.Cards.Where(crd => crd.Id == id).First();
+            Card card = db.Cards
+                    .Where(crd => crd.Id == id)
+                    .First();
 
             ViewBag.Id = id;
 

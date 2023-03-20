@@ -8,57 +8,57 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FaraDosar
 build_property.RootNamespace = FaraDosar
-build_property.ProjectDir = C:\Users\David\Desktop\FaraDosar\FaraDosar\FaraDosar\
+build_property.ProjectDir = D:\Teme\UniBuc\Anul 2\Sem 1\dotNet\RomaniaFaraDosar\FaraDosar\FaraDosar\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\David\Desktop\FaraDosar\FaraDosar\FaraDosar
+build_property.MSBuildProjectDirectory = D:\Teme\UniBuc\Anul 2\Sem 1\dotNet\RomaniaFaraDosar\FaraDosar\FaraDosar
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/David/Desktop/FaraDosar/FaraDosar/FaraDosar/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/Teme/UniBuc/Anul 2/Sem 1/dotNet/RomaniaFaraDosar/FaraDosar/FaraDosar/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/Desktop/FaraDosar/FaraDosar/FaraDosar/Views/Cards/Index.cshtml]
+[D:/Teme/UniBuc/Anul 2/Sem 1/dotNet/RomaniaFaraDosar/FaraDosar/FaraDosar/Views/Cards/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/Desktop/FaraDosar/FaraDosar/FaraDosar/Views/Cards/Show.cshtml]
+[D:/Teme/UniBuc/Anul 2/Sem 1/dotNet/RomaniaFaraDosar/FaraDosar/FaraDosar/Views/Cards/Show.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZHNcU2hvdy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/Desktop/FaraDosar/FaraDosar/FaraDosar/Views/Home/Index.cshtml]
+[D:/Teme/UniBuc/Anul 2/Sem 1/dotNet/RomaniaFaraDosar/FaraDosar/FaraDosar/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/Desktop/FaraDosar/FaraDosar/FaraDosar/Views/Home/Privacy.cshtml]
+[D:/Teme/UniBuc/Anul 2/Sem 1/dotNet/RomaniaFaraDosar/FaraDosar/FaraDosar/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/Desktop/FaraDosar/FaraDosar/FaraDosar/Views/Shared/CardPartial.cshtml]
+[D:/Teme/UniBuc/Anul 2/Sem 1/dotNet/RomaniaFaraDosar/FaraDosar/FaraDosar/Views/Shared/CardPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENhcmRQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/Desktop/FaraDosar/FaraDosar/FaraDosar/Views/Shared/Error.cshtml]
+[D:/Teme/UniBuc/Anul 2/Sem 1/dotNet/RomaniaFaraDosar/FaraDosar/FaraDosar/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/Desktop/FaraDosar/FaraDosar/FaraDosar/Views/Shared/_LoginPartial.cshtml]
+[D:/Teme/UniBuc/Anul 2/Sem 1/dotNet/RomaniaFaraDosar/FaraDosar/FaraDosar/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/Desktop/FaraDosar/FaraDosar/FaraDosar/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Teme/UniBuc/Anul 2/Sem 1/dotNet/RomaniaFaraDosar/FaraDosar/FaraDosar/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/Desktop/FaraDosar/FaraDosar/FaraDosar/Views/_ViewImports.cshtml]
+[D:/Teme/UniBuc/Anul 2/Sem 1/dotNet/RomaniaFaraDosar/FaraDosar/FaraDosar/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/Desktop/FaraDosar/FaraDosar/FaraDosar/Views/_ViewStart.cshtml]
+[D:/Teme/UniBuc/Anul 2/Sem 1/dotNet/RomaniaFaraDosar/FaraDosar/FaraDosar/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/David/Desktop/FaraDosar/FaraDosar/FaraDosar/Views/Shared/_Layout.cshtml]
+[D:/Teme/UniBuc/Anul 2/Sem 1/dotNet/RomaniaFaraDosar/FaraDosar/FaraDosar/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qjdvaq8vbf

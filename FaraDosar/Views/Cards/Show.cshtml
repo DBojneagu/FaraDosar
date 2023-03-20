@@ -1,27 +1,108 @@
-﻿
-
-
+﻿<link rel="stylesheet" href="~/css/Prezentare.css"/>
 
 @if(ViewBag.Id == 1)
 {
-	<p> Universitate
-1. Înscrierea
-2. Plata taxei de examinare (dacă este
-cazul)
-3. Examinare
-4. Rezultat
-4.1 În caz de promovare, diploma de
-absolvire a liceului va fi înaintată în
-original la facultatea aleasă
-		4.2 În caz de ne-promovare, fie se
-		repetă procesul de înscriere, fie se
-		optează pentru un loc cu taxă, în acest
-		caz trebuie plătită o taxă înainte de
-		începutul anului universitar pentru
-		rezervarea locului
-	</p>
+
+	<div class="page-container">
+		<div class="text-container">
+			<h1>Inscrierea la universitate</h1>
+			<p>Pasii care trebuie urmati de un cetatean pentru a se putea inscrie la orice facultate sunt:</p>
+			<ul>
+				<li>Înscrierea</li>
+				<li>Plata taxei de examinare (dacă este cazul)</li>
+				<li>Examinare</li>
+				<li>Rezultat</li>
+				<ul>
+					<li>
+						În caz de promovare, diploma de
+						absolvire a liceului va fi înaintată în
+						original la facultatea aleasă
+					</li>
+					<li>
+						În caz de ne-promovare, fie se
+						repetă procesul de înscriere, fie se
+						optează pentru un loc cu taxă, în acest
+						caz trebuie plătită o taxă înainte de
+						începutul anului universitar pentru
+						rezervarea locului
+					</li>
+				</ul>
+			</ul>
+		</div>
+		<a href="#" class="btn btn-outline-primary rounded-pill">Fa o programare pentru a depune actele (fizic la ghiseu)</a>
+		<a href="#" class="btn btn-outline-primary rounded-pill">Depune actele in platforma online</a>
+	</div>
+
 }
 
 @if(ViewBag.Id == 2){
-	<p>test sa vad daca merge, aici e pe id 2</p>
+	<div class="page-container">
+		<div class="text-container">
+			<h1>Cautarea unui loc de munca</h1>
+			<p>Pasii care trebuie urmati de un cetatean pentru a cauta un loc de munca:</p>
+			<ul>
+				<li>
+					Înaintarea unei cereri de înregistrare
+					în baza de date a ANOFM
+				</li>
+				<li>Prezentarea unui Curriculum Vitae
+				(CV)</li>
+				<li>Selectarea domeniilor de interes</li>
+				<li>
+					În funcţie de locurile disponibile,
+					solicitantul este plasat în poziţia
+					adecvată
+				</li>
+				
+			</ul>
+		</div>
+		<a href="#" class="btn btn-outline-primary rounded-pill">Fa o programare pentru a depune actele (fizic la ghiseu)</a>
+		<a href="#" class="btn btn-outline-primary rounded-pill">Depune actele in platforma online</a>
+	</div>
+}
+
+@if (ViewBag.Id == 3)
+{
+	<div class="page-container">
+		<div class="text-container">
+			<h1>
+				Obţinerea de surse de finanţare
+			</h1>
+			<p>
+				Pasii care trebuie urmati de un cetatean pentru obţinerea de surse de finanţare:
+			</p>
+			<ul>
+				<li>
+					Selectarea sursei de finanţare, în
+					funcţie de necesităţi
+				</li>
+				<li>
+					Aplicarea pentru obţinerea finanţării
+				</li>
+				<li>
+					Dovezi ale capacităţii de returnare a
+					sumei împrumutate - garanţii
+				</li>
+				<li>Decizie</li>
+				<li>
+					Verificarea veridicității clientului
+				</li>
+				<ul>
+					<li>
+						Aprobare, dacă clientul prezintă o
+						istorie financiară pozitivă
+					</li>
+					<li>
+						Respingere, dacă clientul are o
+						reputaţie de rău platnic / nu deţine
+						resursele necesare pentru a restitui
+						împrumutul
+					</li>
+				</ul>
+
+			</ul>
+		</div>
+		<a href="#" class="btn btn-outline-primary rounded-pill">Fa o programare pentru a depune actele (fizic la ghiseu)</a>
+		<a href="#" class="btn btn-outline-primary rounded-pill">Depune actele in platforma online</a>
+	</div>
 }
