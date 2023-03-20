@@ -11218,4 +11218,135 @@ textarea.form-control-lg {
   }
 }
 
+.container1 {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    margin-left: 35px;
+}
+
+
+.cards1 {
+    background: white;
+    width: 270px;
+    height: 520px;
+    margin: 50px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+
+.cards2 {
+    background: white;
+    width: 270px;
+    height: 520px;
+    margin: 50px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+
+.card-image {
+    height: 180px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.CAR {
+    background-image: url(./162742253-f89ab703-049e-4ac0-a4ea-4e87bb25042b.png)
+}
+
+.cards1 h2 {
+    font-family: "SF-Pro", sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+
+.cards1 p {
+    font-family: "SF-Pro", sans-serif;
+    padding: 27px 25px;
+    text-align: center;
+}
+
+.cards2 h2 {
+    font-family: "SF-Pro", sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+
+.cards2 p {
+    font-family: "SF-Pro", sans-serif;
+    padding: 27px 25px;
+    text-align: center;
+}
+
+
+.cards1 a {
+    padding: 10px 15px;
+    margin: 10px 10px 10px 37px;
+    font-family: "SF-Pro", sans-serif;
+    font-size: 18px;
+    border-radius: 15%;
+}
+
+.cards2 a {
+    padding: 10px 15px;
+    margin-left: 100px;
+    font-family: sans-serif;
+    font-size: 18px;
+    border-radius: 15%;
+}
+
+
+.cards1:hover {
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+.cards2:hover {
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+.CAR2 {
+    background-image: url(./AdobeStock_135663532-825x510.jpeg);
+}
+
+.CAR3 {
+    background-image: url(./SD\ project_5.jpg);
+}
+
+.Demo {
+    border: 0;
+    background-color: rgb(7, 105, 204);
+    text-decoration: none;
+    margin-left: 70px;
+    margin-top: 00px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.Code {
+    border: 0;
+    background-color: rgb(7, 105, 204);
+    text-decoration: none;
+    margin-left: 30px;
+    margin-top: 50px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.Code2 {
+    border: 0;
+    background-color: rgb(7, 105, 204);
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
