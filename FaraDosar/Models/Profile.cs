@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Web;
 
 namespace FaraDosar.Models
 {
@@ -12,6 +13,14 @@ namespace FaraDosar.Models
         [Required(ErrorMessage = "Numele este obligatoriu")]
         public string? LastName { get; set; }
         public string? Adresa { get; set; }
+
+        [DataType(DataType.DateTime)]
+        public DateTime? BirthDate { get; set; }
+
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Numarul de telefon invalid!")]
+        public string? PhoneNumber { get; set; }
+
         public string? UserId { get; set; }
         public virtual ApplicationUser? User { get; set; }
     }

@@ -67,9 +67,9 @@ namespace FaraDosar.Controllers
         public IActionResult New(Profile profile)
         {
             profile.UserId = _userManager.GetUserId(User);
-
             if (ModelState.IsValid)
             {
+                
                 db.Profiles.Add(profile);
                 db.SaveChanges();
                 TempData["message"] = "Profilul a fost creat";
