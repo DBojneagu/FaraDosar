@@ -1,0 +1,19 @@
+﻿.page-container {
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+    height: 70vh;
+}
+
+.page-container > a{
+    margin-left: 50px;
+}
+
+.text-container {
+    padding-top: 20px;
+    margin: 50px;
+    height: 80%;
+}
