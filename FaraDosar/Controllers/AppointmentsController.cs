@@ -35,9 +35,11 @@ namespace FaraDosar.Controllers
 			Appointment appointment = new Appointment();
 			appointment.Ore = GetAllHours();
 			appointment.Locations = GetAllLocations();
+            var user = _userManager.GetUserAsync(User).Result;
+            ViewBag.Nume = User.Claims.FirstOrDefault(c => c.Type == "FirstName");
 
-			
-			if (TempData.ContainsKey("message"))
+
+            if (TempData.ContainsKey("message"))
 			{
 				ViewBag.Message = TempData["message"];
 			}
@@ -50,17 +52,16 @@ namespace FaraDosar.Controllers
 		{
 			appointment.UserId = _userManager.GetUserId(User);
 
-
 			if (ModelState.IsValid)
 			{
-				db.Appointments.Add(appointment);
+                db.Appointments.Add(appointment);
 				db.SaveChanges();
 				TempData["message"] = "Appointment a fost adaugat";
 				return Redirect("/Cards/Index");
 			}
 			else
 			{
-				appointment.Ore = GetAllHours();
+                appointment.Ore = GetAllHours();
 				appointment.Locations = GetAllLocations();
 				return View(appointment);
 			}
