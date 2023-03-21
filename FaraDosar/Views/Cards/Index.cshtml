@@ -4,7 +4,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function (event) {
         // array with texts to type in typewriter
-        var dataText = ["Acces rapid.", "Pasi simplii.", "O romanie fara dosar.", "Tu la ce vrei sa dai startul astazi?"];
+        var dataText = ["Acces rapid.", "Pasi simpli.", "O romanie fara dosar.", "Tu la ce vrei sa dai startul astazi?"];
 
         // type one text in the typwriter
         // keeps calling itself until the text is finished
@@ -49,19 +49,38 @@
 </script>
 
 <div class="card bg-white text-black">
-    <div class="banner">
+    <div class="banner" style="text-align: center">
         <h1>
             Tu la ce vrei sa dai startul astazi?
         </h1>
     </div>
     <hr />
-    <div class="descriere">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean hendrerit laoreet massa finibus dapibus. Ut hendrerit arcu tincidunt nunc eleifend gravida. Aenean ornare imperdiet justo, et varius velit. Praesent lobortis vel lorem id molestie. Morbi quis nisi at ligula euismod aliquam. Nunc sollicitudin ac ligula non vulputate. Vivamus aliquet urna et diam maximus, ac imperdiet sem semper. Aenean iaculis luctus mauris eget lacinia. Vivamus egestas, diam at pellentesque scelerisque, nulla justo porta risus, in dapibus est felis ut libero. Mauris iaculis eu velit vel mollis. Pellentesque leo massa, luctus a ipsum et, rhoncus aliquam orci. Suspendisse vitae nisl tincidunt, condimentum tortor eget, accumsan nunc.</p>
+    <div class="descriere" style="font-size: 19px; width: 1000px; text-align: center; margin: auto;">
+        <p>
+            Am creat această platformă pentru tine. Indiferent de ce vrei să faci în continuare, aici găsești toate documentele de care ai nevoie. În plus, le poți trimite direct, fără să mai trebuiască să stai la coadă la ghișeu.
+            <br />
+            <br />
+            Ești adult. Tocmai ce ai absolvit liceul și nu știi ce să faci de acum încolo. Să-ți continui educația? Să te angajezi? Sau să-ți deschizi propria afacere?
+            <br />
+            <br />
+            În cazul în care ai nevoie de suport din partea instituțiilor, sau vrei să depui documentele fizic, te poți programa pentru oricare dintre serviciile prezente pe platformă.
+            Alege serviciul pentru care vrei o programare, introdu datele necesare și selectează ziua și ora dorite de tine. Ai și posibilitatea de a programa o altă persoană.
+
+        </p>
     </div>
     @if (!User.Identity.IsAuthenticated)
     {
-        <p style="background-color: yellow; text-align: center; font-size: 24px; color: red;">PENTRU A PUTE FACE O PROGRAMARE, TREBUIE SA FII LOGAT!</p>
+        <p style="background-color: yellow; text-align: center; font-size: 24px; color: red;">PENTRU A PUTEA FACE O PROGRAMARE, TREBUIE SA FII LOGAT!</p>
     }
+</div>
+<br />
+<br />
+<div class="container">
+    <div class="row no-gutters mt-3 align-items-center" style="margin-left: 17vw;">
+        <div class="col col-md-4">
+            <input class="form-control border-secondary rounded-pill pr-5" type="search" value="search" id="example-search-input2" style="width: 700px;">
+        </div>
+    </div>
 </div>
 <br />
 <br />
@@ -73,11 +92,13 @@
             {
                 <div class="col-sm-4">
                     <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0 text-black">
-                        <img src="~/img/University.png" style="height: 300px;">
+                        <div style="justify-content: center; display: flex;">
+                            <img src="~/img/University.png" style="height: 100px; width: 110px;">
+                        </div>
                         <div class="card-body text-center">
-                            <h5 class="card-title mb-0">@card.Title</h5>
-                            <div class="card-text mb-3">@card.Content</div>
-                            <a href="/Cards/Show/@card.Id" class="btn btn-outline-primary rounded-pill">Citeste mai departe</a>
+                            <h5 class="card-title mb-0" style="font-size: 35px;">@card.Title</h5>
+                            <div class="card-text mb-3" style="margin-top: 90px;">@card.Content</div>
+                            <a href="/Cards/Show/@card.Id" class="btn btn-outline-primary rounded-pill" style="margin-top: 24px;">Citeste mai departe</a>
                         </div>
                     </div>
                 </div>
@@ -86,10 +107,12 @@
             {
                 <div class="col-sm-4">
                     <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0 text-black">
-                        <img src="~/img/Job.png" style="height: 300px;">
+                        <div style="justify-content: center; display: flex;">
+                            <img src="~/img/Job.png" style="height: 100px; width: 110px;">
+                        </div>
                         <div class="card-body text-center">
-                            <h5 class="card-title mb-0">@card.Title</h5>
-                            <div class="card-text mb-3">@card.Content</div>
+                            <h5 class="card-title mb-0" style="font-size: 35px">@card.Title</h5>
+                            <div class="card-text mb-3" style="margin-top: 48px;">@card.Content</div>
                             <a href="/Cards/Show/@card.Id" class="btn btn-outline-primary rounded-pill">Citeste mai departe</a>
                         </div>
                     </div>
@@ -99,11 +122,14 @@
             {
                 <div class="col-sm-4">
                     <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0 text-black">
-                        <img src="~/img/Money.png" style="height: 300px;">
+                        <div style ="justify-content: center; display: flex;">
+                            <img src="~/img/Money.png" style="height: 100px; width: 110px;">
+                        </div>
+
                         <div class="card-body text-center">
-                            <h5 class="card-title mb-0">@card.Title</h5>
-                            <div class="card-text mb-3">@card.Content</div>
-                            <a href="/Cards/Show/@card.Id" class="btn btn-outline-primary rounded-pill">Citeste mai departe</a>
+                            <h5 class="card-title mb-0" style="font-size: 35px">@card.Title</h5>
+                            <div class="card-text mb-3" style="margin-top: 48px;">@card.Content</div>
+                            <a href="/Cards/Show/@card.Id " class="btn btn-outline-primary rounded-pill" style="margin-top: 24px;">Citeste mai departe</a>
                         </div>
                     </div>
                 </div>

@@ -41,5 +41,17 @@
 
 .descriere {
     margin: 30px;
-    font-size: 24px;
+    font-size: 16px;
+}
+
+.btn {
+    background-color: #013D7B;
+    border: #013D7B;
+    color: white;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #013D7B;
+    border: 1px solid #013D7B;
 }
