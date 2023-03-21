@@ -36,74 +36,79 @@
 </style>
 
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-6 offset-3">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-5 mt-5">
+                <h2 class="text-center mb-4">Programare ghiseu</h2>
+                @using (Html.BeginForm(actionName: "New", controllerName: "Appointments",
+                method: FormMethod.Post))
+                {
 
-            @using (Html.BeginForm(actionName: "New", controllerName: "Appointments",
-            method: FormMethod.Post))
-            {
+                    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
 
-                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                    <label>Selectati Adresa</label>
+                    @Html.DropDownListFor(m => m.LocationId, new SelectList(Model.Locations, "Value", "Text"),
+                "Click pt a selecta adresa", new { @class = "form-control" })
 
-                <label>Selectati Adresa</label>
-                @Html.DropDownListFor(m => m.LocationId, new SelectList(Model.Locations, "Value", "Text"),
-            "Selectati Adresa", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.HourId, null, new { @class = "text-danger" })
+                    <br />
 
-                @Html.ValidationMessageFor(m => m.HourId, null, new { @class = "text-danger" })
-                <br />
+                    @*TextBox pentru selectarea datei cu calendar*@
+                    <div class="form-group">
+                        @Html.Label("DateOfAppointmentStart", "Alegeti data la care sa faceti o programare")
+                        @Html.TextBoxFor(m => m.DateOfAppointmentStart, "{0:dd/MM/yyyy}", new {@class = "form-control", @placeholder = "Introduceti data la care are loc intalnirea", @type = "date", @min = DateTime.Now.ToString("yyyy-MM-dd")})
+                        @Html.ValidationMessage("DateOfAppointmentStart", null, new { @class = "text-danger"})
+                    </div>
+                    <br />
+                    <label>Selectati Ora</label>
+                    @Html.DropDownListFor(m => m.HourId, new SelectList(Model.Ore, "Value", "Text"),
+                    "Click pentru a selecta ora", new { @class = "form-control" })
 
-                @*TextBox pentru selectarea datei cu calendar*@
-                <div class="form-group">
-                    @Html.Label("DateOfAppointmentStart", "Alegeti data la care sa faceti o programare")
-                    @Html.TextBoxFor(m => m.DateOfAppointmentStart, "{0:dd/MM/yyyy}", new {@class = "form-control", @placeholder = "Introduceti data la care are loc intalnirea", @type = "date", @min = DateTime.Now.ToString("yyyy-MM-dd")})
-                    @Html.ValidationMessage("DateOfAppointmentStart", null, new { @class = "text-danger"})
-                </div>
+                    @Html.ValidationMessageFor(m => m.HourId, null, new { @class = "text-danger" })
+                    <br />
 
-                <label>Selectati Ora</label>
-                @Html.DropDownListFor(m => m.HourId, new SelectList(Model.Ore, "Value", "Text"),
-            "Selectati Ora", new { @class = "form-control" })
+                    @Html.Label("Nume", "Numele persoanei pe care se face programarea")
+                    <br />
+                    @Html.TextBox("Nume", null, new { @class = "form-control" })
+                    @Html.ValidationMessage("Nume", null, new { @class = "text-danger" })
+                    <br />
 
-                @Html.ValidationMessageFor(m => m.HourId, null, new { @class = "text-danger" })
-                <br />
+                    @Html.Label("Prenume", "Prenumele persoanei pe care se face programarea")
+                    <br />
+                    @Html.TextBox("Prenume", null, new { @class = "form-control" })
+                    @Html.ValidationMessage("Prenume", null, new { @class = "text-danger" })
+                    <br />
 
-                @Html.Label("Nume", "Numele persoanei pe care se face programarea")
-                <br />
-                @Html.TextArea("Nume", null, new { @class = "form-control" })
-                @Html.ValidationMessage("Nume", null, new { @class = "text-danger" })
-                <br />
+                    @Html.Label("NrTel", "Numarul de telefon al persoanei pe care se face programarea")
+                    <br />
+                    @Html.TextBox("NrTel", null, new { @class = "form-control" })
+                    @Html.ValidationMessage("NrTel", null, new { @class = "text-danger" })
+                    <br />
 
-                @Html.Label("Prenume", "Prenumele persoanei pe care se face programarea")
-                <br />
-                @Html.TextArea("Prenume", null, new { @class = "form-control" })
-                @Html.ValidationMessage("Prenume", null, new { @class = "text-danger" })
-                <br />
+                    @Html.Label("CNP", "CNP-ul persoanei pe care se face programarea")
+                    <br />
+                    @Html.TextBox("CNP", null, new { @class = "form-control" })
+                    @Html.ValidationMessage("CNP", null, new { @class = "text-danger" })
+                    <br />
 
-                @Html.Label("NrTel", "Numarul de telefon al persoanei pe care se face programarea")
-                <br />
-                @Html.TextArea("NrTel", null, new { @class = "form-control" })
-                @Html.ValidationMessage("NrTel", null, new { @class = "text-danger" })
-                <br />
+                    <br />
 
-                @Html.Label("CNP", "CNP-ul persoanei pe care se face programarea")
-                <br />
-                @Html.TextArea("CNP", null, new { @class = "form-control" })
-                @Html.ValidationMessage("CNP", null, new { @class = "text-danger" })
-                <br />
+                    <div style="display: flex; justify-content: center">
+                        <button class="buton rounded-pill" type="submit">Adauga programare</button>
+                        
+                    </div>
+                    <br />
+                    <small style="display: flex; justify-content: center">*programare online pentru a depune acetele la ghiseul de la locatia aleasa</small>
 
-                <br />
-
-
-                <br />
-
-
-                <button class="buton rounded-pill" type="submit">Adauga programare</button>
-
-            }
-
+                }
+            </div>
         </div>
     </div>
 </div>
+
+
+
 
 <script type="text/javascript">
     $(document).ready(function () {

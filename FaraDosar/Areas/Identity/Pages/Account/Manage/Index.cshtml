@@ -11,50 +11,52 @@
         <div class="col-md-6">
             <div class="card shadow-lg p-5 mt-5">
                 <h2 class="text-center mb-4">Configurarea profilului</h2>
-            <form id="profile-form" method="post">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <form id="profile-form" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-floating">
                         <input asp-for="Input.LastName" class="form-control" />
                         <label asp-for="Input.LastName" class="form-label"></label>
                         <span asp-validation-for="Input.LastName" class="text-danger"></span>
                     </div>
                     <br />
-                <div class="form-floating">
-                    <input asp-for="Input.FirstName" class="form-control" />
-                    <label asp-for="Input.FirstName" class="form-label"></label>
-                    <span asp-validation-for="Input.FirstName" class="text-danger"></span>
-                </div>
-                <br />
+                    <div class="form-floating">
+                        <input asp-for="Input.FirstName" class="form-control" />
+                        <label asp-for="Input.FirstName" class="form-label"></label>
+                        <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                    </div>
+                    <br />
 
-                <div class="form-floating">
-                    <input asp-for="Input.PhoneNumber" class="form-control" />
-                    <label asp-for="Input.PhoneNumber" class="form-label"></label>
-                    <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-                </div>
-            
-                <br />
-                <div class="form-floating">
-                    <input asp-for="Input.CNP" class="form-control" />
-                    <label asp-for="Input.CNP" class="form-label"></label>
-                    <span asp-validation-for="Input.CNP" class="text-danger"></span>
-                </div>
-                <br />
-                <div class="form-floating">
-                    <input asp-for="Input.Adresa" class="form-control" />
-                    <label asp-for="Input.Adresa" class="form-label"></label>
-                    <span asp-validation-for="Input.Adresa" class="text-danger"></span>
-                </div>
-                <br />
-                <div class="form-floating">
-                    <input asp-for="Input.BirthDate" type="date" class="form-control" />
-                    <label asp-for="Input.BirthDate" class="form-label"></label>
-                    <span asp-validation-for="Input.BirthDate" class="text-danger"></span>
-                </div>
-                <br />
-                    <button id="update-profile-button" style="background-color: #013D7B" type="submit" class="w-100 btn btn-lg btn-primary">
-                        Salvează modificarile
-                    </button>
-            </form>
+                    <div class="form-floating">
+                        <input asp-for="Input.PhoneNumber" class="form-control" />
+                        <label asp-for="Input.PhoneNumber" class="form-label"></label>
+                        <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                    </div>
+
+                    <br />
+                    <div class="form-floating">
+                        <input asp-for="Input.CNP" class="form-control" />
+                        <label asp-for="Input.CNP" class="form-label"></label>
+                        <span asp-validation-for="Input.CNP" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-floating">
+                        <input asp-for="Input.Adresa" class="form-control" />
+                        <label asp-for="Input.Adresa" class="form-label"></label>
+                        <span asp-validation-for="Input.Adresa" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-floating">
+                        <input asp-for="Input.BirthDate" type="date" class="form-control" style=""/>
+                        <label asp-for="Input.BirthDate" class="form-label"></label>
+                        <span asp-validation-for="Input.BirthDate" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div style="display: flex; justify-content: center">
+                        <button id="update-profile-button" style="background-color: #013D7B" type="submit" class="w-100 btn btn-lg btn-primary">
+                            Salvează modificarile
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
