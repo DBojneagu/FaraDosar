@@ -101,6 +101,9 @@ namespace FaraDosar.Controllers
                     profile.FirstName = requestProfile.FirstName;
                     profile.LastName = requestProfile.LastName;
                     profile.Adresa = requestProfile.Adresa;
+                    profile.BirthDate = requestProfile.BirthDate;
+                    profile.PhoneNumber = requestProfile.PhoneNumber;
+                    profile.CNP = requestProfile.CNP;
                     db.SaveChanges();
                     TempData["message"] = "Profil modificat cu Succes";
                     return RedirectToAction("Index");

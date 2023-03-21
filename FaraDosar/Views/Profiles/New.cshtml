@@ -1,18 +1,23 @@
 ﻿@model FaraDosar.Models.Profile
 @{
-    ViewBag.Title = "Profile Configuration";
+    ViewBag.Title = "Configurarea profilului";
 }
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card shadow-lg p-5 mt-5">
-                <h2 class="text-center mb-4">Profile Configuration</h2>
+                <h2 class="text-center mb-4">Configurarea profilului</h2>
                 <hr />
                 @using (Html.BeginForm(actionName: "New", controllerName: "Profiles", method: FormMethod.Post, htmlAttributes: new { enctype = "multipart/form-data" }))
                 {
                     @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-
+                    <div class="form-group">
+                        @Html.Label("LastName","Nume")
+                        @Html.TextBox("LastName",null,new {@class = "form-control",@placeholder = "Introduceti numele vostru din buletin"})
+                        @Html.ValidationMessage("LastName",null,new { @class = "text-danger"})
+                    </div>
+                    <br />
                     <div class="form-group">
                         @Html.Label("FirstName","Prenume")
                         @Html.TextBox("FirstName",null,new {@class = "form-control",@placeholder = "Introduceti prenumele vostru din buletin"})
@@ -20,9 +25,9 @@
                     </div>
                     <br />
                     <div class="form-group">
-                        @Html.Label("LastName","Nume")
-                        @Html.TextBox("LastName",null,new {@class = "form-control",@placeholder = "Introduceti numele vostru din buletin"})
-                        @Html.ValidationMessage("LastName",null,new { @class = "text-danger"})
+                        @Html.Label("CNP","CNP")
+                        @Html.TextBox("CNP",null,new {@class = "form-control",@placeholder = "Introduceti CNP-ul vostru din buletin"})
+                        @Html.ValidationMessageFor(m => m.FirstName,null,new {@class = "text-danger"})
                     </div>
                     <br />
                     <div class="form-group">
@@ -46,7 +51,7 @@
                    
 
                     <div class="form-group text-center">
-                        <button type="submit" class="btn btn-primary px-5 py-2 mt-4">Save Changes</button>
+                        <button style="background-color: #FFFB7D; color: black;" type="submit" class="btn btn-primary px-5 py-2 mt-4">Save Changes</button>
                     </div>
                 }
             </div>
