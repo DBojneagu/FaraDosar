@@ -7,9 +7,13 @@
                 <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0">
                     <img class="card-img-top" src="~/img/filler.jpeg" alt="Card image cap">
                     <div class="card-body text-center">
-                        <div>Adresa :@appointment.Location.Name</div>
-                        <div class="card-text mb-3">Data in care aveti programarea : @appointment.DateOfAppointmentStart.ToShortDateString()</div>
-                        <div>Ora :@appointment.Hour.Time</div>
+                        <div>Adresa: @appointment.Location.Name</div>
+                        <div class="card-text mb-3">Data in care aveti programarea: @appointment.DateOfAppointmentStart.ToShortDateString()</div>
+                        <div>Ora: @appointment.Hour.Time</div>
+                        <div>Nume: @appointment.Nume</div>
+                        <div>Prenume: @appointment.Prenume</div>
+                        <div>Numar telefon: @appointment.NrTel</div>
+                        <div>CNP: @appointment.CNP</div>
                     </div>
                 </div>
             </div>

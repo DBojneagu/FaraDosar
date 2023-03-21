@@ -40,8 +40,25 @@
                 @Html.Label("Nume", "Numele persoanei pe care se face programarea")
                 <br />
                 @Html.TextArea("Nume", null, new { @class = "form-control" })
+                @Html.ValidationMessage("Nume", null, new { @class = "text-danger" })
+                <br />
 
-                @Html.ValidationMessage("Content", null, new { @class = "text-danger" })
+                @Html.Label("Prenume", "Prenumele persoanei pe care se face programarea")
+                <br />
+                @Html.TextArea("Prenume", null, new { @class = "form-control" })
+                @Html.ValidationMessage("Prenume", null, new { @class = "text-danger" })
+                <br />
+
+                @Html.Label("NrTel", "Numarul de telefon al persoanei pe care se face programarea")
+                <br />
+                @Html.TextArea("NrTel", null, new { @class = "form-control" })
+                @Html.ValidationMessage("NrTel", null, new { @class = "text-danger" })
+                <br />
+
+                @Html.Label("CNP", "CNP-ul persoanei pe care se face programarea")
+                <br />
+                @Html.TextArea("CNP", null, new { @class = "form-control" })
+                @Html.ValidationMessage("CNP", null, new { @class = "text-danger" })
                 <br />
 
                 <br />
