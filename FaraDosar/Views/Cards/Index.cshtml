@@ -56,7 +56,16 @@
     </div>
     <hr />
     <div class="descriere">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean hendrerit laoreet massa finibus dapibus. Ut hendrerit arcu tincidunt nunc eleifend gravida. Aenean ornare imperdiet justo, et varius velit. Praesent lobortis vel lorem id molestie. Morbi quis nisi at ligula euismod aliquam. Nunc sollicitudin ac ligula non vulputate. Vivamus aliquet urna et diam maximus, ac imperdiet sem semper. Aenean iaculis luctus mauris eget lacinia. Vivamus egestas, diam at pellentesque scelerisque, nulla justo porta risus, in dapibus est felis ut libero. Mauris iaculis eu velit vel mollis. Pellentesque leo massa, luctus a ipsum et, rhoncus aliquam orci. Suspendisse vitae nisl tincidunt, condimentum tortor eget, accumsan nunc.</p>
+        <p>
+            Ești adult? Tocmai ce-ai absolvit liceul și nu știi ce să faci de acum încolo? Să-ți continui educația? Să te angajezi? Sau să-ți deschizi propria afacere?
+            <br />
+            <br />
+            Am creat această platformă pentru tine. Indiferent de ce vrei să faci în continuare, aici găsești toate documentele de care ai nevoie. În plus, le poți trimite direct, fără să mai trebuiască să stai la coadă la ghișeu.
+            <br />
+            <br />
+            Tu la ce vrei să dai startul astăzi?
+
+       </p>
     </div>
     @if (!User.Identity.IsAuthenticated)
     {
@@ -69,7 +78,7 @@
     <div class="row">
         @foreach (FaraDosar.Models.Card card in ViewBag.Cards)
         {
-            @if (card.Id == 1)
+            @if (card.Id == 2)
             {
                 <div class="col-sm-4">
                     <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0 text-black">
@@ -82,7 +91,7 @@
                     </div>
                 </div>
             }
-            @if (card.Id == 2)
+            @if (card.Id == 3)
             {
                 <div class="col-sm-4">
                     <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0 text-black">
@@ -95,7 +104,7 @@
                     </div>
                 </div>
             }
-            @if (card.Id == 6)
+            @if (card.Id == 4)
             {
                 <div class="col-sm-4">
                     <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0 text-black">
