@@ -12,5 +12,12 @@ namespace FaraDosar.Data
         }
         public DbSet<Card> Cards { get; set; }
         public DbSet<Profile> Profiles { get; set; }
+
+        public DbSet<Appointment> Appointments { get; set; }
+
+        public DbSet<Hour> Hours { get; set; }
+
+
+        public DbSet<Location> Locations { get; set; }
     }
 }

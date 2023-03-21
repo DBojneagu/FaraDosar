@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 public enum AppointmentType
 {
@@ -16,13 +18,27 @@ namespace FaraDosar.Models
 
         // val posibile inscriereUniversitate, cautareLocMunca, obtinereSurseFinantare
         [EnumDataType(typeof(AppointmentType))]
-        [Required(ErrorMessage = "Selectarea este obligatorie!")]
         public AppointmentType? AppointmentFor { get; set; }
 
-        [DataType(DataType.DateTime)]
-        public DateTime? DateOfAppointmentStart { get; set; }
+        [DataType(DataType.Date)]
 
-        public int? ProfileId { get; set; }
-        public virtual Profile? Profile { get; set; }
+        public DateTime? DateOfAppointmentStart { get; set; }
+        [Required(ErrorMessage = "Ora este obligatorie")]
+        public int? HourId { get; set; }
+
+        [NotMapped]
+        public IEnumerable<SelectListItem>? Ore { get; set; }
+        public virtual Hour? Hour { get; set; }
+
+        public int? LocationId { get; set; }
+
+        [NotMapped]
+        public IEnumerable<SelectListItem>? Locations { get; set; }
+        public virtual Location? Location { get; set; }
+
+        public string? UserId { get; set; }
+
+        // PASUL 6 - useri si roluri
+        public virtual ApplicationUser? User { get; set; }
     }
 }

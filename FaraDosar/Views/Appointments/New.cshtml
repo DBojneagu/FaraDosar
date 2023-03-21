@@ -16,20 +16,31 @@
 
                 @Html.ValidationSummary(false, "", new { @class = "text-danger" })
 
+                <label>Selectati Adresa</label>
+                @Html.DropDownListFor(m => m.LocationId, new SelectList(Model.Locations, "Value", "Text"),
+            "Selectati Adresa", new { @class = "form-control" })
+
+                @Html.ValidationMessageFor(m => m.HourId, null, new { @class = "text-danger" })
+                <br />
+
+                @*TextBox pentru selectarea datei cu calendar*@
                 <div class="form-group">
-                    @Html.LabelFor(model => model.DateOfAppointmentStart, new { @class = "control-label" })
-                    <div class="input-group date" data-provide="datepicker">
-                        @Html.TextBoxFor(model => model.DateOfAppointmentStart, new { @class = "form-control" })
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-th"></span>
-                        </div>
-                    </div>
-                    @Html.ValidationMessageFor(model => model.DateOfAppointmentStart, "", new { @class = "text-danger" })
+                    @Html.Label("DateOfAppointmentStart", "Alegeti data la care sa faceti o programare")
+                    @Html.TextBoxFor(m => m.DateOfAppointmentStart, "{0:dd/MM/yyyy}", new {@class = "form-control", @placeholder = "Introduceti data la care are loc intalnirea", @type = "date", @min = DateTime.Now.ToString("yyyy-MM-dd")})
+                    @Html.ValidationMessage("DateOfAppointmentStart", null, new { @class = "text-danger"})
                 </div>
 
-                
+                <label>Selectati Ora</label>
+                @Html.DropDownListFor(m => m.HourId, new SelectList(Model.Ore, "Value", "Text"),
+            "Selectati Ora", new { @class = "form-control" })
 
-                <button class="btn btn-success" type="submit">Adauga programare</button>
+                @Html.ValidationMessageFor(m => m.HourId, null, new { @class = "text-danger" })
+                <br />
+
+                <br />
+
+
+                                <button class="btn btn-success"type="submit">Adauga programare</button>
 
             }
 

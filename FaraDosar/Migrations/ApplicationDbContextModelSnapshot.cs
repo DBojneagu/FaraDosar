@@ -95,20 +95,36 @@ namespace FaraDosar.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AppointmentFor")
+                    b.Property<int?>("AppointmentFor")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("DateOfAppointmentStart")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("HourId")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<int?>("LocationId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("ProfileId")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("HourId");
+
+                    b.HasIndex("LocationId");
 
                     b.HasIndex("ProfileId");
 
-                    b.ToTable("Appointment");
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Appointments");
                 });
 
             modelBuilder.Entity("FaraDosar.Models.Card", b =>
@@ -131,6 +147,40 @@ namespace FaraDosar.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Cards");
+                });
+
+            modelBuilder.Entity("FaraDosar.Models.Hour", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Time")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Hours");
+                });
+
+            modelBuilder.Entity("FaraDosar.Models.Location", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Locations");
                 });
 
             modelBuilder.Entity("FaraDosar.Models.Profile", b =>
@@ -310,11 +360,29 @@ namespace FaraDosar.Migrations
 
             modelBuilder.Entity("FaraDosar.Models.Appointment", b =>
                 {
-                    b.HasOne("FaraDosar.Models.Profile", "Profile")
+                    b.HasOne("FaraDosar.Models.Hour", "Hour")
+                        .WithMany("Appointments")
+                        .HasForeignKey("HourId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FaraDosar.Models.Location", "Location")
+                        .WithMany("Appointments")
+                        .HasForeignKey("LocationId");
+
+                    b.HasOne("FaraDosar.Models.Profile", null)
                         .WithMany("Appointments")
                         .HasForeignKey("ProfileId");
 
-                    b.Navigation("Profile");
+                    b.HasOne("FaraDosar.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Hour");
+
+                    b.Navigation("Location");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("FaraDosar.Models.Profile", b =>
@@ -375,6 +443,16 @@ namespace FaraDosar.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("FaraDosar.Models.Hour", b =>
+                {
+                    b.Navigation("Appointments");
+                });
+
+            modelBuilder.Entity("FaraDosar.Models.Location", b =>
+                {
+                    b.Navigation("Appointments");
                 });
 
             modelBuilder.Entity("FaraDosar.Models.Profile", b =>

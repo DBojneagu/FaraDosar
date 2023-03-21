@@ -1,0 +1,11 @@
+﻿@foreach (FaraDosar.Models.Appointment appointment in ViewBag.Appointments)
+{
+    <div class="card-body">
+
+        <h3 class="card-title alert-success py-3 px-3 rounded-2">@appointment.DateOfAppointmentStart</h3>
+
+        <div><i class="bi bi-globe"></i>@appointment.Hour.Time</div>
+
+    </div>
+
+}
