@@ -72,8 +72,7 @@ namespace FaraDosar.Areas.Identity.Pages.Account.Manage
             public string Adresa { get; set; }
 
             [Display(Name = "Introduceti data voastra de nastere din buletin")]
-            [DataType(DataType.DateTime)]
-            public DateTime BirthDate { get; set; }
+            public DateTime? BirthDate { get; set; }
         }
         private async Task LoadAsync(ApplicationUser user)
         {

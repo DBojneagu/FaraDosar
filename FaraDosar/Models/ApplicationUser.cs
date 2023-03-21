@@ -16,6 +16,9 @@ namespace FaraDosar.Models
 
         [DataType(DataType.DateTime)]
         public DateTime? BirthDate { get; set; }
-
+        public ApplicationUser()
+        {
+            BirthDate = DateTime.Today;
+        }
     }
 }
