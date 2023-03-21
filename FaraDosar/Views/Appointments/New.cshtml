@@ -37,6 +37,16 @@
                 @Html.ValidationMessageFor(m => m.HourId, null, new { @class = "text-danger" })
                 <br />
 
+                @Html.Label("Nume", "Numele persoanei pe care se face programarea")
+                <br />
+                @Html.TextArea("Nume", null, new { @class = "form-control" })
+
+                @Html.ValidationMessage("Content", null, new { @class = "text-danger" })
+                <br />
+
+                <br />
+
+
                 <br />
 
 

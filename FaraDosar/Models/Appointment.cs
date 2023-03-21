@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+
 public enum AppointmentType
 {
     InscriereUniversitate,
@@ -25,6 +26,19 @@ namespace FaraDosar.Models
         public DateTime DateOfAppointmentStart { get; set; }
         [Required(ErrorMessage = "Ora este obligatorie")]
         public int? HourId { get; set; }
+
+        [Required(ErrorMessage = "Numele este obligatoriu")]
+        public string? Nume { get; set; }
+
+        [Required(ErrorMessage = "Prenumele este obligatoriu")]
+        public string? Prenume { get; set; }
+
+        [Required(ErrorMessage = "Numarul de telefon este obligatoriu")]
+        public string? NrTel { get; set; }
+
+        [Required(ErrorMessage = "CNP-ul este obligatoriu")]
+        [StringLength(13, MinimumLength = 13, ErrorMessage = "CNP-ul are 13 caractere")]
+        public string? CNP { get; set; }
 
         [NotMapped]
         public IEnumerable<SelectListItem>? Ore { get; set; }
