@@ -1,6 +1,14 @@
 ﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 
+@{
+    var user = UserManager.GetUserAsync(User).Result;
+    var firstNameClaim = User.Claims.FirstOrDefault(c => c.Type == "FirstName");
 
+    // Daca numele este null atunci va afisa adresa de mail
+    var firstName = firstNameClaim?.Value ?? user?.FirstName ?? User.Identity?.Name;
+}
 @* PASUL 7 - useri si roluri  *@
 
 @inject SignInManager<ApplicationUser> SignInManager
@@ -10,7 +18,7 @@
 @if (SignInManager.IsSignedIn(User))
 {
     <li class="nav-item">
-        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Bună @User.Identity?.Name!</a>
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Bună @firstName!</a>
     </li>
     <li class="nav-item">
         <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
@@ -21,10 +29,10 @@
 else
 {
     <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Înregistrează-te</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Ieși din profil</a>
     </li>
 }
 </ul>

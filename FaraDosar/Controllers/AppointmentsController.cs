@@ -32,20 +32,11 @@ namespace FaraDosar.Controllers
 		{
 			// legam profilul de user pt a folosi profilul in fereastra new
 			var userId = _userManager.GetUserId(User);
-			var profile = db.Profiles.Where(p => p.UserId == userId).FirstOrDefault();
 			Appointment appointment = new Appointment();
 			appointment.Ore = GetAllHours();
 			appointment.Locations = GetAllLocations();
 
-			if (profile == null)
-			{
-				ViewBag.Created = false;
-			}
-			else
-			{
-				ViewBag.Created = true;
-				ViewBag.Profile = profile;
-			}
+			
 			if (TempData.ContainsKey("message"))
 			{
 				ViewBag.Message = TempData["message"];
