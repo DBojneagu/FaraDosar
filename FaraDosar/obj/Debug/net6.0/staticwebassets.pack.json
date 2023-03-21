@@ -21,8 +21,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\img\\filler.jpeg",
-      "PackagePath": "staticwebassets\\img\\filler.jpeg"
+      "Id": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\img\\Job.png",
+      "PackagePath": "staticwebassets\\img\\Job.png"
+    },
+    {
+      "Id": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\img\\Money.png",
+      "PackagePath": "staticwebassets\\img\\Money.png"
+    },
+    {
+      "Id": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\img\\University.png",
+      "PackagePath": "staticwebassets\\img\\University.png"
     },
     {
       "Id": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\js\\site.js",
