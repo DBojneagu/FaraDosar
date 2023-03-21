@@ -22,7 +22,7 @@ namespace FaraDosar.Models
 
         [DataType(DataType.Date)]
 
-        public DateTime? DateOfAppointmentStart { get; set; }
+        public DateTime DateOfAppointmentStart { get; set; }
         [Required(ErrorMessage = "Ora este obligatorie")]
         public int? HourId { get; set; }
 
