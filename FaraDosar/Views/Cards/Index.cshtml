@@ -16,7 +16,7 @@
 
                 // wait for a while and call this function again for next character
                 setTimeout(function () {
-                    typeWriter(text, i + 1, fnCallback).deleteAll()
+                    typeWriter(text, i + 1, fnCallback)
                 }, 100);
             }
             // text finished, call callback if there is a callback function
@@ -98,7 +98,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title mb-0" style="font-size: 35px;">@card.Title</h5>
                             <div class="card-text mb-3" style="margin-top: 90px;">@card.Content</div>
-                            <a href="/Cards/Show/@card.Id" class="btn btn-outline-primary rounded-pill" style="margin-top: 24px;">Citeste mai departe</a>
+                            <a href="/Cards/Show/@card.Id" class="buton rounded-pill" style="margin-top: 24px;">Citeste mai departe</a>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title mb-0" style="font-size: 35px">@card.Title</h5>
                             <div class="card-text mb-3" style="margin-top: 48px;">@card.Content</div>
-                            <a href="/Cards/Show/@card.Id" class="btn btn-outline-primary rounded-pill">Citeste mai departe</a>
+                            <a href="/Cards/Show/@card.Id" class="buton rounded-pill">Citeste mai departe</a>
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title mb-0" style="font-size: 35px">@card.Title</h5>
                             <div class="card-text mb-3" style="margin-top: 48px;">@card.Content</div>
-                            <a href="/Cards/Show/@card.Id " class="btn btn-outline-primary rounded-pill" style="margin-top: 24px;">Citeste mai departe</a>
+                            <a href="/Cards/Show/@card.Id " class="buton rounded-pill" style="margin-top: 24px;">Citeste mai departe</a>
                         </div>
                     </div>
                 </div>

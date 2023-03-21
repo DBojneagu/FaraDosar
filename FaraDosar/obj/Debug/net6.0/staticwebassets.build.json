@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ivOMMvzkRV/nWMdSPFn7P4cF7pxp2gt/hOFfF9VTYsA=",
+  "Hash": "357ucnPS/xp18gu+k23Ga5lD2ScoaBwTyahjHvznka4=",
   "Source": "FaraDosar",
   "BasePath": "_content/FaraDosar",
   "Mode": "Default",
@@ -1088,12 +1088,12 @@
       "OriginalItemSpec": "wwwroot\\css\\card.css"
     },
     {
-      "Identity": "D:\\Teme\\UniBuc\\Anul 2\\Sem 1\\dotNet\\RomaniaFaraDosar\\FaraDosar\\FaraDosar\\wwwroot\\css\\Prezentare.css",
+      "Identity": "D:\\Teme\\UniBuc\\Anul 2\\Sem 1\\dotNet\\RomaniaFaraDosar\\FaraDosar\\FaraDosar\\wwwroot\\css\\prezentare.css",
       "SourceId": "FaraDosar",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Teme\\UniBuc\\Anul 2\\Sem 1\\dotNet\\RomaniaFaraDosar\\FaraDosar\\FaraDosar\\wwwroot\\",
       "BasePath": "_content/FaraDosar",
-      "RelativePath": "css/Prezentare.css",
+      "RelativePath": "css/prezentare.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1102,7 +1102,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Prezentare.css"
+      "OriginalItemSpec": "wwwroot\\css\\prezentare.css"
     },
     {
       "Identity": "D:\\Teme\\UniBuc\\Anul 2\\Sem 1\\dotNet\\RomaniaFaraDosar\\FaraDosar\\FaraDosar\\wwwroot\\css\\site.css",
@@ -1154,6 +1154,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Job.png"
+    },
+    {
+      "Identity": "D:\\Teme\\UniBuc\\Anul 2\\Sem 1\\dotNet\\RomaniaFaraDosar\\FaraDosar\\FaraDosar\\wwwroot\\img\\logo_aadr.png",
+      "SourceId": "FaraDosar",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Teme\\UniBuc\\Anul 2\\Sem 1\\dotNet\\RomaniaFaraDosar\\FaraDosar\\FaraDosar\\wwwroot\\",
+      "BasePath": "_content/FaraDosar",
+      "RelativePath": "img/logo_aadr.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logo_aadr.png"
     },
     {
       "Identity": "D:\\Teme\\UniBuc\\Anul 2\\Sem 1\\dotNet\\RomaniaFaraDosar\\FaraDosar\\FaraDosar\\wwwroot\\img\\Money.png",
