@@ -26,7 +26,8 @@ namespace FaraDosar.Controllers
 		}
 		public IActionResult Index()
 		{
-			return View();
+            
+            return View();
 		}
 		public IActionResult New(string attributeName)
 		{
@@ -56,8 +57,8 @@ namespace FaraDosar.Controllers
 			{
                 db.Appointments.Add(appointment);
 				db.SaveChanges();
-				TempData["message"] = "Appointment a fost adaugat";
-				return Redirect("/Cards/Index");
+				TempData["message"] = "Programarea a fost adaugata";
+				return Redirect("/Appointments/ShowApp");
 			}
 			else
 			{
@@ -140,7 +141,11 @@ namespace FaraDosar.Controllers
 			var appointments = db.Appointments.Include("Hour").Include("Location")
 				.Where(app => app.UserId == userId)
 				.ToList();
-			ViewBag.Appointments = appointments;
+            if (TempData.ContainsKey("message"))
+            {
+                ViewBag.Message = TempData["message"];
+            }
+            ViewBag.Appointments = appointments;
 			return View();
 		}
 
