@@ -55,6 +55,7 @@
         </h1>
     </div>
     <hr />
+
     <div class="descriere" style="font-size: 19px; width: 1000px; text-align: center; margin: auto;">
         <p>
             Am creat această platformă pentru tine. Indiferent de ce vrei să faci în continuare, aici găsești toate documentele de care ai nevoie. În plus, le poți trimite direct, fără să mai trebuiască să stai la coadă la ghișeu.
@@ -88,7 +89,7 @@
     <div class="row">
         @foreach (FaraDosar.Models.Card card in ViewBag.Cards)
         {
-            @if (card.Id == 1)
+            @if (card.Id == 2)
             {
                 <div class="col-sm-4">
                     <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0 text-black">
@@ -103,7 +104,7 @@
                     </div>
                 </div>
             }
-            @if (card.Id == 2)
+            @if (card.Id == 3)
             {
                 <div class="col-sm-4">
                     <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0 text-black">
@@ -118,7 +119,7 @@
                     </div>
                 </div>
             }
-            @if (card.Id == 6)
+            @if (card.Id == 4)
             {
                 <div class="col-sm-4">
                     <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0 text-black">
