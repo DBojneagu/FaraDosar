@@ -1,31 +1,117 @@
 ﻿
 <link rel="stylesheet" href="~/css/card.css" />
 
-<div class="card bg-dark text-white">
-    <img style="width: 1150px; height: 350px" class="card-img max" src="~/img/filler.jpeg" alt="Card image">
-    <div class="card-img-overlay">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text">Last updated 3 mins ago</p>
+<script>
+
+
+    document.addEventListener('DOMContentLoaded', function (event) {
+        // array with texts to type in typewriter
+        var dataText = ["Acces rapid.", "Pasi simplii.", "O romanie fara dosar.", "Tu la ce vrei sa dai startul astazi?"];
+
+        // type one text in the typwriter
+        // keeps calling itself until the text is finished
+        function typeWriter(text, i, fnCallback) {
+            // chekc if text isn't finished yet
+            if (i < (text.length)) {
+                // add next character to h1
+                document.querySelector("h1").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+
+                // wait for a while and call this function again for next character
+                setTimeout(function () {
+                    typeWriter(text, i + 1, fnCallback).pauseFor(100).deleteAll()
+                }, 100);
+            }
+            // text finished, call callback if there is a callback function
+            else if (typeof fnCallback == 'function') {
+                // call callback after timeout
+                setTimeout(fnCallback, 100);
+            }
+        }
+        // start a typewriter animation for a text in the dataText array
+        function StartTextAnimation(i) {
+            if (typeof dataText[i] == 'undefined') {
+                setTimeout(function () {
+                    StartTextAnimation(0);
+                }, 20000);
+            }
+            // check if dataText[i] exists
+            if (i < dataText[i].length) {
+                // text exists! start typewriter animation
+                typeWriter(dataText[i], 0, function () {
+                    // after callback (and whole text has been animated), start next text
+                    StartTextAnimation(i + 1);
+                });
+            }
+        }
+        // start the text animation
+        StartTextAnimation(0);
+    });
+
+
+</script>
+
+<div class="card bg-white text-black">
+    <div class="banner">
+        <h1>
+            Tu la ce vrei sa dai startul astazi?
+        </h1>
     </div>
+    <hr />
+    <div class="descriere">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean hendrerit laoreet massa finibus dapibus. Ut hendrerit arcu tincidunt nunc eleifend gravida. Aenean ornare imperdiet justo, et varius velit. Praesent lobortis vel lorem id molestie. Morbi quis nisi at ligula euismod aliquam. Nunc sollicitudin ac ligula non vulputate. Vivamus aliquet urna et diam maximus, ac imperdiet sem semper. Aenean iaculis luctus mauris eget lacinia. Vivamus egestas, diam at pellentesque scelerisque, nulla justo porta risus, in dapibus est felis ut libero. Mauris iaculis eu velit vel mollis. Pellentesque leo massa, luctus a ipsum et, rhoncus aliquam orci. Suspendisse vitae nisl tincidunt, condimentum tortor eget, accumsan nunc.</p>
+    </div>
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <p style="background-color: yellow; text-align: center; font-size: 24px; color: red;">PENTRU A PUTE FACE O PROGRAMARE, TREBUIE SA FII LOGAT!</p>
+    }
 </div>
 <br />
 <br />
 <div class="container">
     <div class="row">
         @foreach (FaraDosar.Models.Card card in ViewBag.Cards)
-{
-        <div class="col-sm-4">
-            <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title mb-0">@card.Title</h5>
-                    <div class="card-text text-muted mb-3">@card.Content</div>
-                        <a href="/Cards/Show/@card.Id" class="btn btn-outline-primary rounded-pill">Citeste mai departe</a>
+        {
+            @if (card.Id == 1)
+            {
+                <div class="col-sm-4">
+                    <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0 text-black">
+                        <img src="~/img/University.png" style="height: 300px;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0">@card.Title</h5>
+                            <div class="card-text mb-3">@card.Content</div>
+                            <a href="/Cards/Show/@card.Id" class="btn btn-outline-primary rounded-pill">Citeste mai departe</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-}
+            }
+            @if (card.Id == 2)
+            {
+                <div class="col-sm-4">
+                    <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0 text-black">
+                        <img src="~/img/Job.png" style="height: 300px;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0">@card.Title</h5>
+                            <div class="card-text mb-3">@card.Content</div>
+                            <a href="/Cards/Show/@card.Id" class="btn btn-outline-primary rounded-pill">Citeste mai departe</a>
+                        </div>
+                    </div>
+                </div>
+            }
+            @if (card.Id == 6)
+            {
+                <div class="col-sm-4">
+                    <div class="card2 shadow p-3 mb-5 bg-white rounded card border-0 text-black">
+                        <img src="~/img/Money.png" style="height: 300px;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0">@card.Title</h5>
+                            <div class="card-text mb-3">@card.Content</div>
+                            <a href="/Cards/Show/@card.Id" class="btn btn-outline-primary rounded-pill">Citeste mai departe</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        }
 
     </div>
 </div>
