@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yP5kGG0uDabq6ajiVBnTkWTCa8RkdNTjHwRczxtnYBo=",
+  "Hash": "iFzLyGKEf0LS/53eLKfEwS9KqXp08+UBG/YZGYJ3VoU=",
   "Source": "FaraDosar",
   "BasePath": "_content/FaraDosar",
   "Mode": "Default",
@@ -1139,12 +1139,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\img\\filler.jpeg",
+      "Identity": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\img\\Job.png",
       "SourceId": "FaraDosar",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\",
       "BasePath": "_content/FaraDosar",
-      "RelativePath": "img/filler.jpeg",
+      "RelativePath": "img/Job.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1153,7 +1153,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\filler.jpeg"
+      "OriginalItemSpec": "wwwroot\\img\\Job.png"
+    },
+    {
+      "Identity": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\img\\Money.png",
+      "SourceId": "FaraDosar",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\",
+      "BasePath": "_content/FaraDosar",
+      "RelativePath": "img/Money.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Money.png"
+    },
+    {
+      "Identity": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\img\\University.png",
+      "SourceId": "FaraDosar",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\",
+      "BasePath": "_content/FaraDosar",
+      "RelativePath": "img/University.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\University.png"
     },
     {
       "Identity": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\js\\site.js",
