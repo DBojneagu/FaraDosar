@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\img\\University.png"
     },
     {
+      "Id": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\img\\logo_aadr.png",
+      "PackagePath": "staticwebassets\\img\\logo_aadr.png"
+    },
+    {
       "Id": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\img\\people.png",
       "PackagePath": "staticwebassets\\img\\people.png"
     },

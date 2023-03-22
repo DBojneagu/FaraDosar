@@ -33,11 +33,12 @@ namespace FaraDosar.Controllers
 		{
 			// legam profilul de user pt a folosi profilul in fereastra new
 			var userId = _userManager.GetUserId(User);
+
+			var currentUser = db.Users.Where(usr => usr.Id == userId).FirstOrDefault();
+			ViewBag.User = currentUser;
 			Appointment appointment = new Appointment();
 			appointment.Ore = GetAllHours();
 			appointment.Locations = GetAllLocations();
-            var user = _userManager.GetUserAsync(User).Result;
-            ViewBag.Nume = User.Claims.FirstOrDefault(c => c.Type == "FirstName");
 
 
             if (TempData.ContainsKey("message"))
@@ -62,6 +63,9 @@ namespace FaraDosar.Controllers
 			}
 			else
 			{
+                var userId = _userManager.GetUserId(User);
+                var currentUser = db.Users.Where(usr => usr.Id == userId).FirstOrDefault();
+                ViewBag.User = currentUser;
                 appointment.Ore = GetAllHours();
 				appointment.Locations = GetAllLocations();
 				return View(appointment);

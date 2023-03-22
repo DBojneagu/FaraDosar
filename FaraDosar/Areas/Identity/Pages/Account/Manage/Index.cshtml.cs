@@ -58,6 +58,8 @@ namespace FaraDosar.Areas.Identity.Pages.Account.Manage
             /// </summary>
             [Phone]
             [Display(Name = "Introduceti numarul de telefon")]
+            [Required(ErrorMessage = "Numarul de telefon este obligatoriu")]
+            [StringLength(10, MinimumLength = 10, ErrorMessage = "Numarul de telefon trebuie sa aibe 10 caractere")]
             public string PhoneNumber { get; set; }
 
             [Display(Name = "Introduceti prenumele vostru din buletin")]
@@ -66,6 +68,8 @@ namespace FaraDosar.Areas.Identity.Pages.Account.Manage
             public string LastName { get; set; }
 
             [Display(Name = "Introduceti CNP-ul vostru din buletin")]
+            [Required(ErrorMessage = "CNP-ul este obligatoriu")]
+            [StringLength(13, MinimumLength = 13, ErrorMessage = "CNP-ul are trebuie sa aiba 13 caractere")]
             public string CNP { get; set; }
 
             [Display(Name = "Introduceti adresa voastra din buletin")]

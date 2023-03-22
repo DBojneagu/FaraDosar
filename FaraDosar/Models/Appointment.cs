@@ -34,10 +34,11 @@ namespace FaraDosar.Models
         public string? Prenume { get; set; }
 
         [Required(ErrorMessage = "Numarul de telefon este obligatoriu")]
+        [StringLength(10, MinimumLength = 10, ErrorMessage = "Numarul de telefon trebuie sa aibe 10 caractere")]
         public string? NrTel { get; set; }
 
         [Required(ErrorMessage = "CNP-ul este obligatoriu")]
-        [StringLength(13, MinimumLength = 13, ErrorMessage = "CNP-ul are 13 caractere")]
+        [StringLength(13, MinimumLength = 13, ErrorMessage = "CNP-ul are trebuie sa aiba 13 caractere")]
         public string? CNP { get; set; }
 
         [NotMapped]

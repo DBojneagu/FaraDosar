@@ -46,10 +46,11 @@
                     </div>
                     <br />
                     <div class="form-floating">
-                        <input asp-for="Input.BirthDate" type="date" class="form-control" style=""/>
+                        <input asp-for="Input.BirthDate" type="date" class="form-control" style="" max="@DateTime.Now">
                         <label asp-for="Input.BirthDate" class="form-label"></label>
                         <span asp-validation-for="Input.BirthDate" class="text-danger"></span>
                     </div>
+
                     <br />
                     <div style="display: flex; justify-content: center">
                         <button id="update-profile-button" style="background-color: #013D7B" type="submit" class="w-100 btn btn-lg btn-primary">
