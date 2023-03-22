@@ -1,0 +1,186 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Intrați în cont";
+}
+
+@*<h1>@ViewData["Title"]</h1>*@
+<style>
+    .top-buffer {
+        margin-top: 40px;
+    }
+</style>
+
+@{
+    // Definesc lista de divuri
+    var divs = new List<dynamic> {
+        new {
+            IconClass = "bi-bank",
+            IconSize = "5rem",
+            Number = "5643",
+            Text = "Tineri admiși la facultate"
+        },
+        new {
+            IconClass = "bi-bar-chart-line",
+            IconSize = "5rem",
+            Number = "9876",
+            Text = "Tineri și-au găsit loc de muncă"
+        },
+        new {
+            IconClass = "bi-wallet2",
+            IconSize = "5rem",
+            Number = "1075",
+            Text = "De tineri care au primit finanțare"
+        }
+    };
+
+    // Randomizez lista
+    var rnd = new Random();
+    divs = divs.OrderBy(d => rnd.Next()).ToList();
+
+    // Selectezi primele doua divuri
+    var selectedDivs = divs.Take(2);
+}
+
+<section class="vh-70">
+    <div class="top-buffer"> </div>
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-start align-items-center h-100">
+                <div style="margin-right:110px;" class="divInregistrare col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body p-5">
+                            <h2 class="text-uppercase text-center mb-5">@ViewData["Title"]</h2>
+                            <form id="account" method="post">
+                                <div class="form-outline mb-4">
+                                    <input asp-for="Input.Email" type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                                    <label asp-for="Input.Email" class="form-label" for="form3Example3cg">Mailul vostru</label>
+                                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input asp-for="Input.Password" type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                                    <label asp-for="Input.Password" class="form-label" for="form3Example4cg">Parola</label>
+                                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                </div>
+
+                                <div class="d-flex justify-content-center">
+                                    @*<button type="button"
+                                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">*@
+                                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Intră în profil</button>
+                                </div>
+
+                                <p class="text-center text-muted mt-5 mb-0">
+                                    Nu ai cont? <a href="/Identity/Account/Register"
+                                                     class="fw-bold text-body"><u>Înregistrează-te acum!</u></a>
+                                </p>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-left:100px; margin-bottom:160px" class="divMare col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="div1 d-flex align-items-center">
+                        <i class="bi bi-people" style="font-size: 5rem"></i>
+                        <div style="display: flex; flex-direction: column;" class="ms-3">
+                            <b class="pad-number-adjustment" style="font-size: 3rem">1324094</b>
+                            <p class="pad-number-adjustment" style="font-size: 1.2rem; margin-left: 5px; margin-top: -15px;">Utilizatori activi</p>
+                        </div>
+                    </div>
+                    @foreach (var oneDiv in selectedDivs)
+                    {
+                        <div class="d-flex align-items-center">
+                            <i class="bi @oneDiv.IconClass" style="font-size: @oneDiv.IconSize"></i>
+                            <div style="display: flex; flex-direction: column;" class="ms-3">
+                                <b class="pad-number-adjustment" style="font-size: 3rem">@oneDiv.Number</b>
+                                <p class="pad-number-adjustment" style="font-size: 1.2rem; margin-left: 5px; margin-top: -15px;">@oneDiv.Text</p>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@*<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post">
+                <h2>Use a local account to log in.</h2>
+                <hr />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-floating">
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                    <label asp-for="Input.Email" class="form-label"></label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-floating">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
+                    <label asp-for="Input.Password" class="form-label"></label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div>
+                    <div class="checkbox">
+                        <label asp-for="Input.RememberMe" class="form-label">
+                            <input class="form-check-input" asp-for="Input.RememberMe" />
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+                </div>
+                <div>
+                    <p>
+                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                    </p>
+                    <p>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                    </p>
+                    <p>
+                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+            <h3>Use another service to log in.</h3>
+            <hr />
+            @{
+                if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                {
+                    <div>
+                        <p>
+                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
+                            about setting up this ASP.NET application to support logging in via external services</a>.
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                        <div>
+                            <p>
+                                @foreach (var provider in Model.ExternalLogins!)
+                                {
+                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                }
+                            </p>
+                        </div>
+                    </form>
+                }
+            }
+        </section>
+    </div>
+</div>*@
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

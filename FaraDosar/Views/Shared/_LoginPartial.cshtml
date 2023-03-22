@@ -4,10 +4,10 @@
 
 @{
     var user = UserManager.GetUserAsync(User).Result;
-    var firstNameClaim = User.Claims.FirstOrDefault(c => c.Type == "FirstName");
+    var firstNameClaim = User.Claims.FirstOrDefault(c => c.Type == "LastName");
 
     // Daca numele este null atunci va afisa adresa de mail
-    var firstName = firstNameClaim?.Value ?? user?.FirstName ?? User.Identity?.Name;
+    var firstName = firstNameClaim?.Value ?? user?.LastName ?? User.Identity?.Name;
 }
 @* PASUL 7 - useri si roluri  *@
 

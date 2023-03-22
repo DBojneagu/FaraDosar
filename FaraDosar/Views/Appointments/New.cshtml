@@ -1,6 +1,10 @@
 ﻿@model FaraDosar.Models.Appointment
 @{
     ViewBag.Title = "Creare unei inregistrari";
+    String prenume = ViewBag.User.FirstName;
+    String nume = ViewBag.User.LastName;
+    String phoneNumber = ViewBag.User.PhoneNumber;
+    String CNP = ViewBag.User.CNP;
 }
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
@@ -35,6 +39,14 @@
         }
 </style>
 
+<script>
+    function resetForm() {
+        document.getElementById("Nume").value = "";
+        document.getElementById("Prenume").value = "";
+        document.getElementById("NrTel").value = "";
+        document.getElementById("CNP").value = "";
+    }
+</script>
 
 <div class="container">
     <div class="row justify-content-center">
@@ -70,35 +82,35 @@
 
                     @Html.Label("Nume", "Numele persoanei pe care se face programarea")
                     <br />
-                    @Html.TextBox("Nume", null, new { @class = "form-control" })
+                    @Html.TextBox("Nume", nume, new { @class = "form-control" })
                     @Html.ValidationMessage("Nume", null, new { @class = "text-danger" })
                     <br />
 
                     @Html.Label("Prenume", "Prenumele persoanei pe care se face programarea")
                     <br />
-                    @Html.TextBox("Prenume", null, new { @class = "form-control" })
+                    @Html.TextBox("Prenume", prenume, new { @class = "form-control" })
                     @Html.ValidationMessage("Prenume", null, new { @class = "text-danger" })
                     <br />
 
                     @Html.Label("NrTel", "Numarul de telefon al persoanei pe care se face programarea")
                     <br />
-                    @Html.TextBox("NrTel", null, new { @class = "form-control" })
+                    @Html.TextBox("NrTel", phoneNumber, new { @class = "form-control" })
                     @Html.ValidationMessage("NrTel", null, new { @class = "text-danger" })
                     <br />
 
                     @Html.Label("CNP", "CNP-ul persoanei pe care se face programarea")
                     <br />
-                    @Html.TextBox("CNP", null, new { @class = "form-control" })
+                    @Html.TextBox("CNP", CNP, new { @class = "form-control" })
                     @Html.ValidationMessage("CNP", null, new { @class = "text-danger" })
                     <br />
 
                     <br />
-
                     <div style="display: flex; justify-content: center">
+                        <button class="btn btn-link" type="button" onclick="resetForm()">Reseteaza datele formularului</button>
+
                         <button class="buton rounded-pill" type="submit">Adauga programare</button>
                         
                     </div>
-                    <br />
                     <small style="display: flex; justify-content: center">*programare online pentru a depune acetele la ghiseul de la locatia aleasa</small>
 
                 }
