@@ -3,7 +3,10 @@
 {
     <h2 class="alert-success p-3 rounded-3 text-center mb-5">@ViewBag.Message</h2>
 }
+
 <div class="container">
+    <h2 style="display: flex; justify-content: center">Programările mele</h2>
+    <br />
     <div class="row">
         @foreach (FaraDosar.Models.Appointment appointment in ViewBag.Appointments)
         {
@@ -17,6 +20,10 @@
                         <div>Prenume: @appointment.Prenume</div>
                         <div>Numar telefon: @appointment.NrTel</div>
                         <div>CNP: @appointment.CNP</div>
+                        <br />
+                        <form method="post" action="/Appointments/Delete/@appointment.Id">
+                            <button class="btn btn-danger" type="submit"><i class="bi bi-trash3"></i>  Șterge</button>
+                        </form>
                     </div>
                 </div>
             </div>

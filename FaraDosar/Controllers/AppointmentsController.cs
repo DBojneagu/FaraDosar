@@ -72,7 +72,18 @@ namespace FaraDosar.Controllers
 			}
 		}
 
+		[HttpPost]
+		public ActionResult Delete(int id)
+		{
+			Appointment appointment = db.Appointments
+										.Where(app => app.Id == id)
+										.First();
 
+			db.Appointments.Remove(appointment);
+			db.SaveChanges();
+			TempData["message"] = "Programarea a fost ștearsă cu succes!";
+			return RedirectToAction("ShowApp");
+		}
 
 		/*[Authorize(Roles = "User,Admin")]
         public IActionResult New()
