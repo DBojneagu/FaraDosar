@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\img\\Job.png"
     },
     {
+      "Id": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\img\\Logo-StartViitor.png",
+      "PackagePath": "staticwebassets\\img\\Logo-StartViitor.png"
+    },
+    {
       "Id": "C:\\Users\\rasky\\source\\repos\\FaraDosar\\FaraDosar\\wwwroot\\img\\Money.png",
       "PackagePath": "staticwebassets\\img\\Money.png"
     },

@@ -50,7 +50,15 @@
 
 <div class="container">
     <div class="row justify-content-center">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/Cards/Index">Acasă</a></li>
+                <li class="breadcrumb-item"><a href="/Cards/Show/1">Înscriere la facultate</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Adăugarea unei programări noi</li>
+            </ol>
+        </nav>
         <div class="col-md-6">
+            
             <div class="card shadow-lg p-5 mt-5">
                 <h2 class="text-center mb-4">Programare ghiseu</h2>
                 @using (Html.BeginForm(actionName: "New", controllerName: "Appointments",

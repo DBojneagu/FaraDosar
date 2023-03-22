@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FaraDosar.Controllers
 {
-    [Authorize]
+    // [Authorize]
     public class CardsController : Controller
     {
 
@@ -37,7 +37,7 @@ namespace FaraDosar.Controllers
 
             return View();
         }
-
+        [Authorize]
         public IActionResult Show(int id)
         {
             Card card = db.Cards

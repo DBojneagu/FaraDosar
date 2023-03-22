@@ -1,8 +1,16 @@
 ﻿<link rel="stylesheet" href="~/css/prezentare.css"/>
 
+
+
+
 @if(ViewBag.Id == 1)
 {
-
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="/Cards/Index">Acasă</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Înscriere la facultate</li>
+		</ol>
+	</nav>
 	<div class="page-container">
 		<div class="text-container">
 			<h1>Inscrierea la universitate</h1>
@@ -37,6 +45,12 @@
 }
 
 @if(ViewBag.Id == 2){
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="/Cards/Index">Acasă</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Cautarea unui loc de munca</li>
+		</ol>
+	</nav>
 	<div class="page-container">
 		<div class="text-container">
 			<h1>Cautarea unui loc de munca</h1>
@@ -61,8 +75,14 @@
 	</div>
 }
 
-@if (ViewBag.Id == 6)
+@if (ViewBag.Id == 3)
 {
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="/Cards/Index">Acasă</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Obţinerea de surse de finanţare</li>
+		</ol>
+	</nav>
 	<div class="page-container">
 		<div class="text-container">
 			<h1>
